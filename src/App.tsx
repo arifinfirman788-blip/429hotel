@@ -4,6 +4,15 @@
  */
 
 import React, { useState, useEffect } from 'react';
+
+// Images Import
+import audioKnowledge1 from './assets/images/audio-knowledge-1.png';
+import audioKnowledge2 from './assets/images/audio-knowledge-2.png';
+import audioKnowledge3 from './assets/images/audio-knowledge-3.png';
+import aiData1 from './assets/images/ai-data-1.png';
+import aiData2 from './assets/images/ai-data-2.png';
+import cityPartner1 from './assets/images/city-partner-1.png';
+
 import { 
   BarChart3, 
   Hotel, 
@@ -548,13 +557,13 @@ export default function App() {
                         <div className="w-full h-40 bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm relative" onClick={(e) => e.stopPropagation()}>
                           <Carousel>
                             <div className="w-full h-full flex justify-center items-center p-2">
-                              <img src="/src/assets/images/audio-knowledge-1.png" alt="AI 录音提取展示" className="max-h-full object-contain" />
+                              <img src={audioKnowledge1} alt="AI 录音提取展示" className="max-h-full object-contain" />
                             </div>
                             <div className="w-full h-full flex justify-center items-center p-2">
-                              <img src="/src/assets/images/audio-knowledge-2.png" alt="展业工具界面" className="max-h-full object-contain" />
+                              <img src={audioKnowledge2} alt="展业工具界面" className="max-h-full object-contain" />
                             </div>
                             <div className="w-full h-full flex justify-center items-center p-2">
-                              <img src="/src/assets/images/audio-knowledge-3.png" alt="录音豆设备展示" className="max-h-full object-contain" />
+                              <img src={audioKnowledge3} alt="录音豆设备展示" className="max-h-full object-contain" />
                             </div>
                           </Carousel>
                           <div className="absolute inset-0 z-10 cursor-pointer pointer-events-none group-hover:bg-blue-500/5 transition-colors" onClick={() => setActiveModal('audio_to_knowledge')}></div>
@@ -579,10 +588,10 @@ export default function App() {
                         <div className="w-full h-40 bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm relative" onClick={(e) => e.stopPropagation()}>
                           <Carousel>
                             <div className="w-full h-full flex justify-center items-center p-2">
-                              <img src="/src/assets/images/ai-data-1.png" alt="AI数据采集界面 1" className="max-h-full object-contain" />
+                              <img src={aiData1} alt="AI数据采集界面 1" className="max-h-full object-contain" />
                             </div>
                             <div className="w-full h-full flex justify-center items-center p-2">
-                              <img src="/src/assets/images/ai-data-2.png" alt="AI数据采集界面 2" className="max-h-full object-contain" />
+                              <img src={aiData2} alt="AI数据采集界面 2" className="max-h-full object-contain" />
                             </div>
                           </Carousel>
                           <div className="absolute inset-0 z-10 cursor-pointer pointer-events-none group-hover:bg-blue-500/5 transition-colors" onClick={() => setActiveModal('ai_data_collection')}></div>
@@ -606,7 +615,7 @@ export default function App() {
                         {/* 外部展示图轮播区域 */}
                         <div className="w-full h-40 bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm relative group/img" onClick={(e) => { e.stopPropagation(); setActiveModal('city_partner'); }}>
                           <div className="w-full h-full flex justify-center items-center p-2 relative">
-                            <img src="/src/assets/images/city-partner-1.png" alt="城市合伙人工具展示" className="max-h-full object-contain cursor-zoom-in" />
+                            <img src={cityPartner1} alt="城市合伙人工具展示" className="max-h-full object-contain cursor-zoom-in" />
                             <div className="absolute inset-0 bg-black/5 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
                                <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 text-blue-600 text-xs font-bold">
                                  <ImageIcon className="w-3.5 h-3.5" />
@@ -1197,7 +1206,7 @@ export default function App() {
               <div className="-mt-28">
                 <DeviceMockup type="tablet">
                   <img 
-                    src="/src/assets/images/audio-knowledge-1.png" 
+                    src={audioKnowledge1} 
                     alt="AI 录音提取展示" 
                     className="w-full h-auto"
                     referrerPolicy="no-referrer"
@@ -1218,7 +1227,7 @@ export default function App() {
             <div className="mt-4 flex justify-center">
               <DeviceMockup type="iphone">
                 <img 
-                  src="/src/assets/images/audio-knowledge-2.png" 
+                  src={audioKnowledge2} 
                   alt="展业工具界面" 
                   className="w-full h-auto"
                   referrerPolicy="no-referrer"
@@ -1239,7 +1248,7 @@ export default function App() {
               <div className="flex justify-center">
                 <ImageCard 
                   label="录音豆设备展示" 
-                  src="/src/assets/images/audio-knowledge-3.png" 
+                  src={audioKnowledge3} 
                   className="w-full max-w-md"
                 />
               </div>
@@ -1290,7 +1299,7 @@ export default function App() {
                   <div className="text-sm font-bold text-slate-900">核心功能模块：</div>
                   <p className="text-base text-slate-600">①客户线索采集建档：</p>
                   <img 
-                    src="https://imagetourl.cloud/lcexjhpe.png" 
+                    src={aiData1} 
                     alt="核心功能模块展示" 
                     className="w-full h-auto rounded-lg"
                     referrerPolicy="no-referrer"
@@ -1306,7 +1315,7 @@ export default function App() {
                   <div className="text-xs text-blue-500 font-mono mb-4 underline">http://172.16.20.5:5555/hotel_profile_detail.html?id=182</div>
                   <ImageCard 
                     label="单个酒店画像自适应展示卡片" 
-                    src="https://imagetourl.cloud/ap73dquy.png" 
+                    src={aiData2} 
                   />
                 </div>
               </div>
@@ -1425,18 +1434,18 @@ export default function App() {
           </div>
           
           <div className="mt-12 pt-8 border-t border-slate-200">
-             <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 shadow-sm relative group cursor-zoom-in" onClick={() => window.open('/src/assets/images/city-partner-1.png', '_blank')}>
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 text-blue-600 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity z-10">
-                   <ImageIcon className="w-3.5 h-3.5" />
-                   点击查看大图
-                </div>
-                <img 
-                  src="/src/assets/images/city-partner-1.png" 
-                  alt="城市合伙人机制与工具配图" 
-                  className="w-full h-auto rounded-xl max-h-[600px] object-contain"
-                />
-             </div>
-          </div>
+              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 shadow-sm relative group cursor-zoom-in" onClick={() => window.open(cityPartner1, '_blank')}>
+                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 text-blue-600 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity z-10">
+                    <ImageIcon className="w-3.5 h-3.5" />
+                    点击查看大图
+                 </div>
+                 <img 
+                   src={cityPartner1} 
+                   alt="城市合伙人机制与工具配图" 
+                   className="w-full h-auto rounded-xl max-h-[600px] object-contain"
+                 />
+              </div>
+           </div>
         </div>
       </Modal>
 
