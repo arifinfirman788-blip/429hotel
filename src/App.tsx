@@ -1017,10 +1017,11 @@ export default function App() {
                                </div>
                              </div>
                            </div>
-                           <div className="lg:w-2/3 w-full bg-slate-50 p-6 rounded-2xl border border-slate-100 flex items-center justify-center min-h-[400px] h-[1200px] overflow-hidden">
+                           <div className="lg:w-2/3 w-full bg-slate-50 p-6 rounded-2xl border border-slate-100 flex items-center justify-center min-h-[400px] h-[600px] overflow-hidden relative">
                              <iframe 
                                src="http://localhost:3001/" 
-                               className="w-full h-full rounded-xl border border-slate-200 shadow-inner bg-white"
+                               className="absolute top-0 left-0 border border-slate-200 shadow-inner bg-white"
+                               style={{ width: '125%', height: '125%', transform: 'scale(0.8)', transformOrigin: '0 0', borderRadius: '1rem' }}
                                title="酒店老板AI数字员工作战室原型"
                                allowFullScreen
                                onLoad={() => window.scrollTo(0, 0)}
