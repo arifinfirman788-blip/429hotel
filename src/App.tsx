@@ -14,6 +14,8 @@ import aiData2 from './assets/images/ai-data-2.png';
 import cityPartner1 from './assets/images/city-partner-1.png';
 import hardwareTv from './assets/images/hardware-tv.jpg';
 import hardwareKiosk from './assets/images/hardware-kiosk.jpg';
+import dataTicket from './assets/images/data-ticket.png';
+import dataCar from './assets/images/data-car.png';
 
 import { 
   BarChart3, 
@@ -286,6 +288,11 @@ const Modal = ({ isOpen, onClose, title, icon: Icon, children }: { isOpen: boole
 export default function App() {
   const [activeTab, setActiveTab] = useState(0);
   const [activeModal, setActiveModal] = useState<string | null>(null);
+
+  // 修复刷新页面后自动滚动到底部的 bug
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#F8FAFC] text-slate-900 font-sans selection:bg-blue-100 selection:text-blue-900">
@@ -677,16 +684,18 @@ export default function App() {
                           <div className="lg:w-2/3 w-full bg-white p-6 rounded-2xl border border-slate-100 flex items-center justify-center min-h-[400px]">
                             <Carousel>
                               <div className="w-full flex justify-center py-6">
-                                <div className="bg-slate-50 w-full max-w-md rounded-xl border border-slate-200 p-6 flex flex-col items-center justify-center min-h-[240px] border-dashed">
-                                  <ImageIcon className="w-10 h-10 text-slate-300 mb-3" />
-                                  <span className="text-slate-400 font-medium">门票及用车数据说明展示图预留位置</span>
-                                </div>
+                                <ImageCard 
+                                  label="门票数据说明" 
+                                  className="w-full max-w-md" 
+                                  src={dataTicket}
+                                />
                               </div>
                               <div className="w-full flex justify-center py-6">
-                                <div className="bg-slate-50 w-full max-w-md rounded-xl border border-slate-200 p-6 flex flex-col items-center justify-center min-h-[240px] border-dashed">
-                                  <ImageIcon className="w-10 h-10 text-slate-300 mb-3" />
-                                  <span className="text-slate-400 font-medium">供应链组织展示图预留位置</span>
-                                </div>
+                                <ImageCard 
+                                  label="用车数据说明" 
+                                  className="w-full max-w-md" 
+                                  src={dataCar}
+                                />
                               </div>
                             </Carousel>
                           </div>
