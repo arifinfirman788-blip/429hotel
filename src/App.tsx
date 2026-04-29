@@ -16,6 +16,8 @@ import hardwareTv from './assets/images/hardware-tv.jpg';
 import hardwareKiosk from './assets/images/hardware-kiosk.jpg';
 import dataTicket from './assets/images/data-ticket.png';
 import dataCar from './assets/images/data-car.png';
+import productSide1 from './assets/images/product-side-1.png';
+import productSide2 from './assets/images/product-side-2.png';
 
 import { 
   BarChart3, 
@@ -780,19 +782,20 @@ export default function App() {
                                    />
                                  </DeviceMockup>
                               </div>
-                              {/* 转化界面 */}
                               <div className="w-full flex justify-center py-6">
-                                 <DeviceMockup type="iphone">
-                                   <img 
-                                     src="https://i.imgs.ovh/2026/04/28/jputlh.png" 
-                                     alt="商品卡片转化界面" 
-                                     loading="lazy"
-                                     className="w-full h-auto"
-                                     referrerPolicy="no-referrer"
-                                   />
-                                 </DeviceMockup>
+                                <ImageCard 
+                                  label="产品侧说明展示图 1" 
+                                  className="w-full max-w-md" 
+                                  src={productSide1}
+                                />
                               </div>
-                              {/* 后台 */}
+                              <div className="w-full flex justify-center py-6">
+                                <ImageCard 
+                                  label="产品侧说明展示图 2" 
+                                  className="w-full max-w-md" 
+                                  src={productSide2}
+                                />
+                              </div>
                               <div className="w-full flex justify-center py-6">
                                 <DeviceMockup type="tablet">
                                   <img 
