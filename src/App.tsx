@@ -11,7 +11,9 @@ import audioKnowledge2 from './assets/images/audio-knowledge-2.png';
 import audioKnowledge3 from './assets/images/audio-knowledge-3.png';
 import aiData1 from './assets/images/ai-data-1.png';
 import aiData2 from './assets/images/ai-data-2.png';
-import cityPartner1 from './assets/images/city-partner-1.png';
+import cityPartner1 from './assets/city-partner-1.png';
+import cityPartner2 from './assets/city-partner-2.png';
+import cityPartner3 from './assets/city-partner-3.png';
 import hardwareTv from './assets/images/hardware-tv.jpg';
 import hardwareKiosk from './assets/images/hardware-kiosk.jpg';
 import dataTicket from './assets/images/data-ticket.png';
@@ -168,8 +170,15 @@ const ObjectiveItem = ({ num, title, content }: { num: string, title: string, co
   </div>
 );
 
-const Carousel = ({ children, autoPlay = true, interval = 3000 }: { children: React.ReactNode, autoPlay?: boolean, interval?: number }) => {
-  const items = React.Children.toArray(children);
+const Carousel = ({ children, autoPlay = true, interval = 3000, images = [] }: { children?: React.ReactNode, autoPlay?: boolean, interval?: number, images?: string[] }) => {
+   const items = images.length > 0 
+     ? images.map((src, i) => (
+         <div key={i} className="w-full h-full flex justify-center items-center p-2 relative">
+           <img src={src} alt={`Slide ${i + 1}`} className="max-h-full object-contain cursor-zoom-in" onClick={() => window.open(src, '_blank')} />
+           {children}
+         </div>
+       ))
+     : React.Children.toArray(children);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -594,15 +603,15 @@ export default function App() {
                         </p>
                         {/* 外部展示图轮播区域 */}
                         <div className="w-full h-40 bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm relative group/img" onClick={(e) => { e.stopPropagation(); setActiveModal('city_partner'); }}>
-                          <div className="w-full h-full flex justify-center items-center p-2 relative">
-                            <img src={cityPartner1} alt="城市合伙人工具展示" className="max-h-full object-contain cursor-zoom-in" />
-                            <div className="absolute inset-0 bg-black/5 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center">
+                          <Carousel images={[cityPartner1, cityPartner2, cityPartner3]}>
+                            <div className="absolute inset-0 bg-black/5 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
                                <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 text-blue-600 text-xs font-bold">
                                  <ImageIcon className="w-3.5 h-3.5" />
                                  点击放大
                                </div>
                             </div>
-                          </div>
+                          </Carousel>
+                          <div className="absolute inset-0 z-10 cursor-pointer pointer-events-none group-hover:bg-blue-500/5 transition-colors" onClick={() => setActiveModal('city_partner')}></div>
                         </div>
                       </div>
                     </div>
@@ -1368,16 +1377,13 @@ export default function App() {
           </div>
           
           <div className="mt-12 pt-8 border-t border-slate-200">
-              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 shadow-sm relative group cursor-zoom-in" onClick={() => window.open(cityPartner1, '_blank')}>
-                 <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 text-blue-600 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity z-10">
-                    <ImageIcon className="w-3.5 h-3.5" />
-                    点击查看大图
-                 </div>
-                 <img 
-                   src={cityPartner1} 
-                   alt="城市合伙人机制与工具配图" 
-                   className="w-full h-auto rounded-xl max-h-[600px] object-contain"
-                 />
+              <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 shadow-sm relative group">
+                 <Carousel images={[cityPartner1, cityPartner2, cityPartner3]}>
+                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 text-blue-600 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity z-10 pointer-events-none">
+                      <ImageIcon className="w-3.5 h-3.5" />
+                      点击查看大图
+                   </div>
+                 </Carousel>
               </div>
            </div>
         </div>
