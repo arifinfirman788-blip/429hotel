@@ -374,7 +374,7 @@ export default function App() {
               </h3>
               <div className="bg-slate-50 rounded-3xl p-8 border border-slate-100">
                 <p className="text-base md:text-lg text-slate-600 leading-relaxed">
-                  截至目前，入网酒店数量合计<span className="text-blue-600 font-bold">1492家</span>，包括贵州省九个地市州，包含星级酒店、精品酒店、连锁酒店、商务型酒店、民宿等类型全覆盖。
+                  截至目前，入网酒店数量合计<span className="text-blue-600 font-bold">1492家</span>，房间已布码637家，包括贵州省九个地市州，包含星级酒店、精品酒店、连锁酒店、商务型酒店、民宿等类型全覆盖。按现有数据统计，房间码的平均访问率在8%-10%，重点酒店访问率接近15%，个别酒店访问率接近100%，平均每用户有接近2次AI问答，平均每20位用户有1次工单需求。
                 </p>
               </div>
             </div>
@@ -423,12 +423,12 @@ export default function App() {
                   </p>
                 </div>
                 <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
-                  <div className="text-sm text-blue-600 font-bold mb-3 uppercase tracking-wider">AI诉求收集</div>
+                  <div className="text-sm text-blue-600 font-bold mb-3 uppercase tracking-wider">需求收集</div>
                   <div className="text-3xl font-bold text-blue-600 mb-2">108<span className="text-lg ml-1">条</span></div>
-                  <p className="text-base text-slate-600">收集分析酒店AI诉求，整理筛选共性需求</p>
+                  <p className="text-base text-slate-600">收集分析酒店需求，整理筛选共性需求</p>
                 </div>
                 <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
-                  <div className="text-sm text-blue-600 font-bold mb-3 uppercase tracking-wider">核心导向</div>
+                  <div className="text-sm text-blue-600 font-bold mb-3 uppercase tracking-wider">核心需求</div>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <div className="w-2 h-2 rounded-full bg-blue-500"></div>
@@ -444,7 +444,7 @@ export default function App() {
                     </div>
                   </div>
                 </div>
-                <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 md:col-span-2 lg:col-span-2">
+                <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100 md:col-span-2 lg:col-span-3">
                   <div className="text-sm text-blue-600 font-bold mb-3 uppercase tracking-wider">功能开发</div>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                     <div className="bg-white rounded-xl p-3 text-center border border-slate-200">
@@ -459,14 +459,6 @@ export default function App() {
                     <div className="bg-white rounded-xl p-3 text-center border border-slate-200">
                       <div className="text-base font-bold text-slate-800">周边地图榜单</div>
                     </div>
-                  </div>
-                </div>
-                <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
-                  <div className="text-sm text-blue-600 font-bold mb-3 uppercase tracking-wider">产品目标</div>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">实用性</span>
-                    <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">好用性</span>
-                    <span className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">易用性</span>
                   </div>
                 </div>
               </div>
