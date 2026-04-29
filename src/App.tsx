@@ -470,23 +470,12 @@ export default function App() {
                 <span className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-sm text-blue-600">4</span>
                 1.4 重点客户跟进情况
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                  <h4 className="font-bold text-blue-600 mb-3">惠水夜郎智慧酒店</h4>
-                  <p className="text-slate-600 text-base leading-relaxed">酒店无夜班工作人员值守，ai问答功能解决了住客在夜间的所有咨询问题，减少差评产生。</p>
-                </div>
-                <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                  <h4 className="font-bold text-blue-600 mb-3">思南温泉酒店</h4>
-                  <p className="text-slate-600 text-base leading-relaxed">智能体ai问答覆盖了百分之八十住客对酒店设施的咨询，大大减轻了工作人员重复回答高频问题工作量；</p>
-                </div>
-                <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                  <h4 className="font-bold text-blue-600 mb-3">都匀灵智大酒店</h4>
-                  <p className="text-slate-600 text-base leading-relaxed">酒店本身有智能化改造需求，智能体的出现为住客提供了全新的入住体验，工单提交便捷，ai回复精准；</p>
-                </div>
-                <div className="bg-white p-6 rounded-2xl shadow-sm border border-slate-100">
-                  <h4 className="font-bold text-blue-600 mb-3">公羽家设计师酒店</h4>
-                  <p className="text-slate-600 text-base leading-relaxed">酒店智能体自营商城以及平台商城为酒店提供了新的挣钱渠道；</p>
-                </div>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {['深圳贵旅旅居', '贵州酒店行业协会', '安顺城市合伙人', '开封与文昌'].map((name, index) => (
+                  <div key={index} className="bg-white hover:bg-blue-50 transition-colors py-8 px-4 rounded-2xl shadow-sm border border-slate-100 flex items-center justify-center text-center group cursor-default">
+                    <span className="font-bold text-lg md:text-xl text-blue-600 group-hover:text-blue-700">{name}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
