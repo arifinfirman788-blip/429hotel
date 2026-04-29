@@ -12,6 +12,8 @@ import audioKnowledge3 from './assets/images/audio-knowledge-3.png';
 import aiData1 from './assets/images/ai-data-1.png';
 import aiData2 from './assets/images/ai-data-2.png';
 import cityPartner1 from './assets/images/city-partner-1.png';
+import hardwareTv from './assets/images/hardware-tv.jpg';
+import hardwareKiosk from './assets/images/hardware-kiosk.jpg';
 
 import { 
   BarChart3, 
@@ -124,14 +126,21 @@ const DeviceMockup = ({ type, children, title }: { type: 'iphone' | 'tablet', ch
 };
 
 const ImageCard = ({ ratio = "", label, src, className = "" }: { ratio?: string, label: string, src?: string, className?: string }) => (
-  <div className={`bg-slate-100 rounded-xl overflow-hidden border border-slate-200 group relative ${ratio} ${className}`}>
+  <div className={`bg-slate-100 rounded-xl overflow-hidden border border-slate-200 group relative cursor-zoom-in ${ratio} ${className}`} onClick={() => src && window.open(src, '_blank')}>
     {src ? (
-      <img 
-        src={src} 
-        alt={label} 
-        className="w-full h-auto"
-        referrerPolicy="no-referrer"
-      />
+      <>
+        <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 text-blue-600 text-xs font-bold opacity-0 group-hover:opacity-100 transition-opacity z-10">
+          <ImageIcon className="w-3.5 h-3.5" />
+          点击查看大图
+        </div>
+        <img 
+          src={src} 
+          alt={label} 
+          loading="lazy"
+          className="w-full h-auto object-contain"
+          referrerPolicy="no-referrer"
+        />
+      </>
     ) : (
       <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
         <div className="w-12 h-12 rounded-full bg-white/80 flex items-center justify-center mb-2 text-slate-400 group-hover:scale-110 transition-transform">
@@ -140,8 +149,6 @@ const ImageCard = ({ ratio = "", label, src, className = "" }: { ratio?: string,
         <span className="text-xs text-slate-500 font-medium uppercase tracking-wider">{label}</span>
       </div>
     )}
-    <div className="absolute bottom-4 left-4 right-4 text-center opacity-0 group-hover:opacity-100 transition-opacity">
-    </div>
   </div>
 );
 
@@ -756,6 +763,7 @@ export default function App() {
                                   <img 
                                     src="https://i.imgs.ovh/2026/04/28/jpujde.jpeg" 
                                     alt="供应链方案" 
+                                    loading="lazy"
                                     className="w-full h-auto"
                                     referrerPolicy="no-referrer"
                                   />
@@ -791,6 +799,7 @@ export default function App() {
                                    <img 
                                      src="https://i.imgs.ovh/2026/04/28/jpudcM.jpeg" 
                                      alt="AI识别需求推送" 
+                                     loading="lazy"
                                      className="w-full h-auto"
                                      referrerPolicy="no-referrer"
                                    />
@@ -802,6 +811,7 @@ export default function App() {
                                    <img 
                                      src="https://i.imgs.ovh/2026/04/28/jputlh.png" 
                                      alt="商品卡片转化界面" 
+                                     loading="lazy"
                                      className="w-full h-auto"
                                      referrerPolicy="no-referrer"
                                    />
@@ -813,6 +823,7 @@ export default function App() {
                                   <img 
                                     src="https://i.imgs.ovh/2026/04/28/jpul8r.png" 
                                     alt="本地组网管理后台" 
+                                    loading="lazy"
                                     className="w-full h-auto"
                                     referrerPolicy="no-referrer"
                                   />
@@ -983,10 +994,11 @@ export default function App() {
                               </div>
                               {/* 方案2: 电视 */}
                               <div className="w-full flex justify-center py-6">
-                                <div className="bg-slate-50 w-full max-w-md rounded-xl border border-slate-200 p-6 flex flex-col items-center justify-center min-h-[240px] border-dashed">
-                                  <ImageIcon className="w-10 h-10 text-slate-300 mb-3" />
-                                  <span className="text-slate-400 font-medium">方案2：电视接入展示图预留</span>
-                                </div>
+                                <ImageCard 
+                                  label="方案2：电视接入" 
+                                  className="w-full max-w-md" 
+                                  src={hardwareTv}
+                                />
                               </div>
                               {/* 方案3: 碰碰贴 */}
                               <div className="w-full flex justify-center py-6">
@@ -998,10 +1010,11 @@ export default function App() {
                               </div>
                               {/* 方案4: 一体机 */}
                               <div className="w-full flex justify-center py-6">
-                                <div className="bg-slate-50 w-full max-w-md rounded-xl border border-slate-200 p-6 flex flex-col items-center justify-center min-h-[240px] border-dashed">
-                                  <ImageIcon className="w-10 h-10 text-slate-300 mb-3" />
-                                  <span className="text-slate-400 font-medium">方案4：前台一体机展示图预留</span>
-                                </div>
+                                <ImageCard 
+                                  label="方案4：前台一体机" 
+                                  className="w-full max-w-md" 
+                                  src={hardwareKiosk}
+                                />
                               </div>
                             </Carousel>
                           </div>
@@ -1063,21 +1076,13 @@ export default function App() {
                                </div>
                              </div>
                            </div>
-                           <div className="lg:w-2/3 w-full bg-slate-50 p-6 rounded-2xl border border-slate-100 flex items-center justify-center min-h-[400px]">
-                             <Carousel>
-                               <div className="w-full flex justify-center py-6">
-                                 <div className="bg-white w-full max-w-md rounded-xl border border-slate-200 p-6 flex flex-col items-center justify-center min-h-[240px] border-dashed">
-                                   <ImageIcon className="w-10 h-10 text-slate-300 mb-3" />
-                                   <span className="text-slate-400 font-medium">老板工作台展示图预留位置</span>
-                                 </div>
-                               </div>
-                               <div className="w-full flex justify-center py-6">
-                                 <div className="bg-white w-full max-w-md rounded-xl border border-slate-200 p-6 flex flex-col items-center justify-center min-h-[240px] border-dashed">
-                                   <ImageIcon className="w-10 h-10 text-slate-300 mb-3" />
-                                   <span className="text-slate-400 font-medium">员工工作台展示图预留位置</span>
-                                 </div>
-                               </div>
-                             </Carousel>
+                           <div className="lg:w-2/3 w-full bg-slate-50 p-6 rounded-2xl border border-slate-100 flex items-center justify-center min-h-[400px] h-[600px] overflow-hidden">
+                             <iframe 
+                               src="http://localhost:3001/" 
+                               className="w-full h-full rounded-xl border border-slate-200 shadow-inner bg-white"
+                               title="酒店老板AI数字员工作战室原型"
+                               allowFullScreen
+                             />
                            </div>
                          </div>
                        </div>
@@ -1301,6 +1306,7 @@ export default function App() {
                   <img 
                     src={aiData1} 
                     alt="核心功能模块展示" 
+                    loading="lazy"
                     className="w-full h-auto rounded-lg"
                     referrerPolicy="no-referrer"
                   />
@@ -1353,6 +1359,7 @@ export default function App() {
                       <img 
                         src="https://i.imgs.ovh/2026/04/28/jpmpXc.jpeg" 
                         alt="BD 移动端工作台" 
+                        loading="lazy"
                         className="w-full h-auto"
                         referrerPolicy="no-referrer"
                       />
