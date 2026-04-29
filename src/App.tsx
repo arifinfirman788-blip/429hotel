@@ -16,7 +16,7 @@ import cityPartner2 from './assets/city-partner-2.png';
 import cityPartner3 from './assets/city-partner-3.png';
 import hardwareTv from './assets/images/hardware-tv.jpg';
 import hardwareKiosk from './assets/images/hardware-kiosk.jpg';
-import dataTicket from './assets/images/data-ticket.png';
+import dataTicket from './assets/images/data-ticket-new.png';
 import dataCar from './assets/images/data-car.png';
 import productSide1 from './assets/images/product-side-1.png';
 import productSide2 from './assets/images/product-side-2.png';
