@@ -1017,7 +1017,7 @@ export default function App() {
                                </div>
                              </div>
                            </div>
-                           <div className="lg:w-2/3 w-full bg-slate-50 p-6 rounded-2xl border border-slate-100 flex items-center justify-center min-h-[400px] h-[600px] overflow-hidden">
+                           <div className="lg:w-2/3 w-full bg-slate-50 p-6 rounded-2xl border border-slate-100 flex items-center justify-center min-h-[400px] h-[800px] overflow-hidden">
                              <iframe 
                                src="http://localhost:3001/" 
                                className="w-full h-full rounded-xl border border-slate-200 shadow-inner bg-white"
