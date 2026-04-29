@@ -519,31 +519,14 @@ export default function App() {
               </div>
             </div>
 
-            {/* 2.2 业务目标一：规模 */}
+            {/* 2.2 业务目标一：做大规模，快速提升酒店入驻数量 */}
             <div className="mb-24 space-y-16">
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-6 font-display text-slate-900 border-l-4 border-blue-600 pl-4">2.2 业务目标一：规模</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-6 font-display text-slate-900 border-l-4 border-blue-600 pl-4">2.2 业务目标一：做大规模，快速提升酒店入驻数量</h3>
                 
                 <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 mb-8">
-                  {/* 1. 目标 */}
-                  <div className="mb-10">
-                    <h4 className="text-xl font-bold text-blue-600 mb-4 flex items-center gap-2">
-                      <Target className="w-6 h-6" />
-                      1. 目标
-                    </h4>
-                    <div className="bg-blue-50/50 p-5 rounded-2xl border border-blue-100/50">
-                      <p className="text-slate-700 text-base md:text-lg leading-relaxed font-medium">
-                        快速提升酒店入驻数量，实现规模化覆盖。
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* 2. 近期重点产出 */}
+                  {/* 近期重点产出 */}
                   <div>
-                    <h4 className="text-xl font-bold text-blue-600 mb-6 flex items-center gap-2">
-                      <Zap className="w-6 h-6" />
-                      2. 近期重点产出
-                    </h4>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                       <div 
                         className="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all cursor-pointer group"
@@ -638,35 +621,18 @@ export default function App() {
               </div>
             </div>
 
-            {/* 2.3 业务目标二：挣钱 */}
+            {/* 2.3 业务目标二：利他利己，跑通组网运营的商业模式 */}
             <div id="money" className="mb-24 space-y-16">
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-6 font-display text-slate-900 border-l-4 border-blue-600 pl-4">2.3 业务目标二：挣钱</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-6 font-display text-slate-900 border-l-4 border-blue-600 pl-4">2.3 业务目标二：利他利己，跑通组网运营的商业模式</h3>
                 
                 <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 mb-8 relative overflow-hidden">
                   <div className="absolute top-0 right-0 p-12 opacity-[0.03] pointer-events-none text-blue-600">
                     <TrendingUp size={400} />
                   </div>
                   
-                  {/* 1. 目标 */}
-                  <div className="mb-10 relative z-10">
-                    <h4 className="text-xl font-bold text-blue-600 mb-4 flex items-center gap-2">
-                      <Target className="w-6 h-6" />
-                      1. 目标
-                    </h4>
-                    <div className="bg-blue-50/50 p-5 rounded-2xl border border-blue-100/50">
-                      <p className="text-slate-700 text-base md:text-lg leading-relaxed font-medium">
-                        构建本地联营与二次销售商业生态。利他利己，跑通组网运营的商业模式。通过整合文旅供应链资源，实现酒店、平台与供给方的多方共赢及规模化营收。
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* 2. 近期重点产出 */}
+                  {/* 近期重点产出 */}
                   <div className="relative z-10">
-                    <h4 className="text-xl font-bold text-blue-600 mb-6 flex items-center gap-2">
-                      <Zap className="w-6 h-6" />
-                      2. 近期重点产出
-                    </h4>
                     <div className="space-y-8">
                       {/* 业务侧 */}
                       <div className="bg-slate-50 border border-slate-100 p-6 md:p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
@@ -866,31 +832,14 @@ export default function App() {
               </div>
             </div>
 
-            {/* 2.4 业务目标三：住客体验 */}
+            {/* 2.4 业务目标三：加强住客产品体验，提升住店评价 */}
             <div id="experience" className="mb-24 space-y-16">
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-6 font-display text-slate-900 border-l-4 border-blue-600 pl-4">2.4 业务目标三：住客体验</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-6 font-display text-slate-900 border-l-4 border-blue-600 pl-4">2.4 业务目标三：加强住客产品体验，提升住店评价</h3>
                 
                 <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 mb-8 relative overflow-hidden">
-                  {/* 1. 目标 */}
-                  <div className="mb-10 relative z-10">
-                    <h4 className="text-xl font-bold text-blue-600 mb-4 flex items-center gap-2">
-                      <Target className="w-6 h-6" />
-                      1. 目标
-                    </h4>
-                    <div className="bg-blue-50/50 p-5 rounded-2xl border border-blue-100/50">
-                      <p className="text-slate-700 text-base md:text-lg leading-relaxed font-medium">
-                        从被动响应到主动感知。加强住客产品体验，提升住店评价。
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* 2. 近期重点产出 */}
+                  {/* 近期重点产出 */}
                   <div className="relative z-10">
-                    <h4 className="text-xl font-bold text-blue-600 mb-6 flex items-center gap-2">
-                      <Zap className="w-6 h-6" />
-                      2. 近期重点产出
-                    </h4>
                     
                     <div className="space-y-8">
                       {/* 1、首页改版 */}
@@ -1026,31 +975,14 @@ export default function App() {
               </div>
             </div>
 
-            {/* 2.5 业务目标四：酒店工作台 */}
+            {/* 2.5 业务目标四：重构经营逻辑，实现酒店运营自驱 */}
             <div id="workstation" className="mb-24 space-y-16">
                <div>
-                 <h3 className="text-2xl md:text-3xl font-bold mb-6 font-display text-slate-900 border-l-4 border-blue-600 pl-4">2.5 业务目标四：酒店工作台</h3>
+                 <h3 className="text-2xl md:text-3xl font-bold mb-6 font-display text-slate-900 border-l-4 border-blue-600 pl-4">2.5 业务目标四：重构经营逻辑，实现酒店运营自驱</h3>
                  
                  <div className="bg-white rounded-3xl p-8 shadow-sm border border-slate-100 mb-8 relative overflow-hidden">
-                   {/* 1. 目标 */}
-                   <div className="mb-10 relative z-10">
-                     <h4 className="text-xl font-bold text-blue-600 mb-4 flex items-center gap-2">
-                       <Target className="w-6 h-6" />
-                       1. 目标
-                     </h4>
-                     <div className="bg-blue-50/50 p-5 rounded-2xl border border-blue-100/50">
-                       <p className="text-slate-700 text-base md:text-lg leading-relaxed font-medium">
-                         打造酒店老板和员工的双端工作台。重构经营逻辑，实现酒店运营自驱。
-                       </p>
-                     </div>
-                   </div>
-
-                   {/* 2. 近期重点产出 */}
+                   {/* 近期重点产出 */}
                    <div className="relative z-10">
-                     <h4 className="text-xl font-bold text-blue-600 mb-6 flex items-center gap-2">
-                       <Zap className="w-6 h-6" />
-                       2. 近期重点产出
-                     </h4>
                      
                      <div className="space-y-8">
                        <div className="bg-white border border-slate-100 p-6 md:p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
