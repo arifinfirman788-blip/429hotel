@@ -27,6 +27,14 @@ import contactBImg from './assets/images/product-side/contact-b.jpeg';
 import demandPushImg from './assets/images/product-side/demand-push.jpeg';
 import tabletAdminImg from './assets/images/product-side/tablet-admin.png';
 
+import businessImg1 from './assets/images/business-side/img1.png';
+import businessImg2 from './assets/images/business-side/img2.png';
+import businessImg3 from './assets/images/business-side/img3.png';
+
+import productImg1 from './assets/images/product-side/img1.png';
+import productImg2 from './assets/images/product-side/img2.png';
+import productImg3 from './assets/images/product-side/img3.png';
+
 import { 
   BarChart3, 
   Hotel, 
@@ -666,16 +674,23 @@ export default function App() {
                             <Carousel>
                               <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <ImageCard 
-                                  label="门票数据说明" 
+                                  label="业务侧说明展示图 1" 
                                   className="w-full h-full absolute inset-0" 
-                                  src={dataTicket}
+                                  src={businessImg1}
                                 />
                               </div>
                               <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <ImageCard 
-                                  label="用车数据说明" 
+                                  label="业务侧说明展示图 2" 
                                   className="w-full h-full absolute inset-0" 
-                                  src={dataCar}
+                                  src={businessImg2}
+                                />
+                              </div>
+                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
+                                <ImageCard 
+                                  label="业务侧说明展示图 3" 
+                                  className="w-full h-full absolute inset-0" 
+                                  src={businessImg3}
                                 />
                               </div>
                             </Carousel>
@@ -713,78 +728,26 @@ export default function App() {
                           </div>
                           <div className="lg:w-2/3 w-full bg-white p-6 rounded-2xl border border-slate-100 flex items-center justify-center h-[500px]">
                             <Carousel>
-                              {/* 供应链方案 */}
-                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
-                                <DeviceMockup type="iphone">
-                                  <img 
-                                    src={supplyChainImg} 
-                                    alt="供应链方案" 
-                                    loading="lazy"
-                                    className="w-full h-auto"
-                                    referrerPolicy="no-referrer"
-                                  />
-                                </DeviceMockup>
-                              </div>
-                              {/* 陪跑卡片 */}
-                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
-                                <ImageCard 
-                                  label="试点酒店陪跑场景自适应卡片" 
-                                  className="w-full h-full absolute inset-0" 
-                                  src={runWithCardImg}
-                                />
-                              </div>
-                              {/* 触点 A */}
-                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
-                                <ImageCard 
-                                  label="触点部署 A" 
-                                  className="w-full h-full absolute inset-0" 
-                                  src={contactAImg}
-                                />
-                              </div>
-                              {/* 触点 B */}
-                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
-                                <ImageCard 
-                                  label="触点部署 B" 
-                                  className="w-full h-full absolute inset-0" 
-                                  src={contactBImg}
-                                />
-                              </div>
-                              {/* 需求推送 */}
-                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
-                                 <DeviceMockup type="iphone">
-                                   <img 
-                                     src={demandPushImg} 
-                                     alt="AI识别需求推送" 
-                                     loading="lazy"
-                                     className="w-full h-auto"
-                                     referrerPolicy="no-referrer"
-                                   />
-                                 </DeviceMockup>
-                              </div>
                               <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <ImageCard 
                                   label="产品侧说明展示图 1" 
                                   className="w-full h-full absolute inset-0" 
-                                  src={productSide1}
+                                  src={productImg1}
                                 />
                               </div>
                               <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <ImageCard 
                                   label="产品侧说明展示图 2" 
                                   className="w-full h-full absolute inset-0" 
-                                  src={productSide2}
+                                  src={productImg2}
                                 />
                               </div>
                               <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
-                                <DeviceMockup type="tablet">
-                                  <img 
-                                    src={tabletAdminImg} 
-                                    alt="本地组网管理后台" 
-                                    loading="lazy"
-                                    className="w-full h-auto"
-                                    referrerPolicy="no-referrer"
-                                  />
-                                </DeviceMockup>
+                                <ImageCard 
+                                  label="产品侧说明展示图 3" 
+                                  className="w-full h-full absolute inset-0" 
+                                  src={productImg3}
+                                />
                               </div>
                             </Carousel>
                           </div>
