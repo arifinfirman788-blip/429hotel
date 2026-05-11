@@ -225,7 +225,7 @@ const Carousel = ({ children, autoPlay = true, interval = 3000, images = [] }: {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="w-full relative flex justify-center items-center">
+      <div className="w-full h-full relative flex justify-center items-center">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -233,7 +233,7 @@ const Carousel = ({ children, autoPlay = true, interval = 3000, images = [] }: {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -20 }}
             transition={{ duration: 0.2 }}
-            className="w-full flex justify-center items-center"
+            className="w-full h-full flex justify-center items-center"
           >
             {items[currentIndex]}
           </motion.div>
