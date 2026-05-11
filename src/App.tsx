@@ -439,6 +439,63 @@ export default function App() {
               </div>
             </div>
 
+            {/* 五一假期数据复盘 */}
+            <div className="mb-16">
+              <h3 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3 text-slate-800">
+                <span className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-sm text-blue-600">★</span>
+                五一假期数据复盘
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-white rounded-2xl p-8 border border-green-100 shadow-sm relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-green-50 rounded-bl-full -z-10"></div>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                    </div>
+                    <h4 className="text-xl font-bold text-slate-800">智能体有用</h4>
+                  </div>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
+                      <p className="text-slate-600 text-lg">5.1期间总访问 <span className="font-bold text-slate-800">4701</span> 次，单日日活最大 <span className="font-bold text-green-600">破千</span></p>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
+                      <p className="text-slate-600 text-lg">平均每次访问有 <span className="font-bold text-slate-800">2次</span> 的AI问答和 <span className="font-bold text-slate-800">5.2次</span> 的页面访问数</p>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
+                      <p className="text-slate-600 text-lg">平均每 <span className="font-bold text-slate-800">20次</span> 访问有一次服务请求</p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-white rounded-2xl p-8 border border-orange-100 shadow-sm relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-orange-50 rounded-bl-full -z-10"></div>
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-600">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                    </div>
+                    <h4 className="text-xl font-bold text-slate-800">运营短板凸显</h4>
+                  </div>
+                  <ul className="space-y-4">
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0"></div>
+                      <p className="text-slate-600 text-lg">4701次访问主要来自于 <span className="font-bold text-slate-800">103家</span> 酒店</p>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0"></div>
+                      <p className="text-slate-600 text-lg">其他500余家酒店仅有 <span className="font-bold text-orange-600">个位数</span> 的访问</p>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-orange-500 mt-2 flex-shrink-0"></div>
+                      <p className="text-slate-600 text-lg">剩下900余家酒店是 <span className="font-bold text-red-500">0访问量</span></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
             {/* 1.3 重点酒店使用反馈 */}
             <div className="mb-16">
               <h3 className="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3 text-slate-800">
@@ -559,10 +616,16 @@ export default function App() {
                           录音转知识库
                           <ArrowRight className="w-4 h-4 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                         </h5>
-                        <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                        <p className="text-sm text-slate-600 leading-relaxed mb-3">
                           帮助酒店快速入驻<br/>
                           <span className="text-blue-500 text-xs mt-1 inline-block">（同步考虑硬件方案）</span>
                         </p>
+                        <div className="mb-6 p-2.5 bg-green-50 border border-green-100 rounded-lg">
+                          <p className="text-xs font-medium text-green-700 flex items-center gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                            五一最新进展：录音转知识库的skill已经上线
+                          </p>
+                        </div>
                         {/* 外部展示图轮播区域 */}
                         <div className="w-full h-56 bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm relative" onClick={(e) => e.stopPropagation()}>
                           <Carousel images={[audioKnowledge1, audioKnowledge2, audioKnowledge3]} />
@@ -602,9 +665,15 @@ export default function App() {
                           城市合伙人机制与工具
                           <ArrowRight className="w-4 h-4 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" />
                         </h5>
-                        <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                        <p className="text-sm text-slate-600 leading-relaxed mb-3">
                           帮助全国版本快速拓客
                         </p>
+                        <div className="mb-6 p-2.5 bg-green-50 border border-green-100 rounded-lg">
+                          <p className="text-xs font-medium text-green-700 flex items-center gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                            五一最新进展：经纪人端工作台MVP原型已上线
+                          </p>
+                        </div>
                         {/* 外部展示图轮播区域 */}
                         <div className="w-full h-56 bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm relative group/img" onClick={(e) => { e.stopPropagation(); setActiveModal('city_partner'); }}>
                           <Carousel images={[cityPartner1, cityPartner2, cityPartner3]}>
@@ -645,6 +714,12 @@ export default function App() {
                             <h5 className="font-bold text-slate-900 text-xl mb-6 leading-snug">跑通组网供应链与数据验证</h5>
                             
                             <div className="space-y-4">
+                              <div className="mb-4 p-3 bg-green-50 border border-green-100 rounded-lg">
+                                <p className="text-sm font-medium text-green-700 flex items-start gap-2">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-green-500 mt-1.5 flex-shrink-0"></span>
+                                  <span>五一最新进展：黄果树门票在安顺10余家酒店累计分销已经 <span className="font-bold text-green-800 text-base">70余万</span></span>
+                                </p>
+                              </div>
                               {/* Data Card 1 */}
                               <div className="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
                                 <div className="text-sm text-slate-500 mb-1">周末黄果树门票试销 (安顺约10家酒店)</div>
@@ -713,6 +788,12 @@ export default function App() {
                             <h5 className="font-bold text-slate-900 text-xl mb-4 leading-snug">供应链功能适配与智能销售闭环</h5>
                             
                             <div className="space-y-6">
+                              <div className="p-3 bg-green-50 border border-green-100 rounded-lg">
+                                <p className="text-sm font-medium text-green-700 leading-relaxed">
+                                  <span className="font-bold">五一最新进展：</span><br/>
+                                  组网运营模式已在1家酒店试点一周，本周三之前上线十家酒店。试点酒店实现一笔销售订单突破。
+                                </p>
+                              </div>
                               <div>
                                 <p className="text-slate-600 text-sm leading-relaxed mb-3">
                                   供应链相关功能已完成多类酒店经营方案的全面适配，可支撑酒店开展本地联营及二次销售相关业务。
@@ -809,9 +890,15 @@ export default function App() {
                           <div className="lg:w-1/3 w-full">
                             <div className="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-md text-xs font-bold mb-4">产品侧</div>
                             <h5 className="font-bold text-slate-900 text-xl mb-4 leading-snug">首页改版：从被动问答到主动感知</h5>
-                            <p className="text-slate-600 leading-relaxed mb-6">
+                            <p className="text-slate-600 leading-relaxed mb-4">
                               实现从“被动问答的聊天机器”向“主动感知的行程管家”的跨越。
                             </p>
+                            <div className="mb-6 p-2.5 bg-green-50 border border-green-100 rounded-lg">
+                              <p className="text-xs font-medium text-green-700 flex items-center gap-1.5">
+                                <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                                五一最新进展：新版首页已正式上线
+                              </p>
+                            </div>
                             <div className="space-y-3">
                               <div className="p-4 bg-white rounded-xl border border-slate-100 shadow-sm">
                                 <div className="font-bold text-slate-800 text-sm mb-1">状态驱动行程卡</div>
@@ -870,9 +957,19 @@ export default function App() {
                           <div className="lg:w-1/3 w-full">
                             <div className="inline-block px-3 py-1 bg-purple-100 text-purple-700 rounded-md text-xs font-bold mb-4">硬件侧</div>
                             <h5 className="font-bold text-slate-900 text-xl mb-4 leading-snug">多场景智能硬件设计</h5>
-                            <p className="text-slate-600 leading-relaxed mb-6">
+                            <p className="text-slate-600 leading-relaxed mb-4">
                               通过四大硬件方案，实现酒店智能体从纯软件系统向物理具身触角的进化，无缝融入客房与前台。
                             </p>
+                            <div className="mb-6 p-3 bg-green-50 border border-green-100 rounded-lg space-y-2">
+                              <p className="text-sm font-medium text-green-700 flex items-start gap-2">
+                                <span className="w-1.5 h-1.5 rounded-full bg-green-500 mt-1.5 flex-shrink-0"></span>
+                                <span><span className="font-bold">多彩新媒：</span>对接完成，同意共同开发推到房间电视上的二维码（及内容），具体合作方式还在磋商。</span>
+                              </p>
+                              <p className="text-sm font-medium text-green-700 flex items-start gap-2">
+                                <span className="w-1.5 h-1.5 rounded-full bg-green-500 mt-1.5 flex-shrink-0"></span>
+                                <span><span className="font-bold">硬件设计：</span>客房音箱、前台一体机的硬件用户故事设计完成，需要对接供应商。</span>
+                              </p>
+                            </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3">
                               <div className="p-4 bg-white rounded-xl border border-slate-100 shadow-sm flex items-center gap-3">
                                 <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 font-bold shrink-0">1</div>
@@ -951,9 +1048,15 @@ export default function App() {
                            <div className="lg:w-1/3 w-full">
                              <div className="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 rounded-md text-xs font-bold mb-4">产品侧</div>
                              <h5 className="font-bold text-slate-900 text-xl mb-4 leading-snug">酒店老板和员工工作台设计情况汇报</h5>
-                             <p className="text-slate-600 leading-relaxed mb-6">
+                             <p className="text-slate-600 leading-relaxed mb-4">
                                围绕酒店实际经营场景，打造赋能老板与员工的双端工作台，提升管理与服务效率。
                              </p>
+                             <div className="mb-6 p-2.5 bg-green-50 border border-green-100 rounded-lg">
+                               <p className="text-xs font-medium text-green-700 flex items-center gap-1.5">
+                                 <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                                 五一最新进展：工作台还在优化skills，于本月正式投入使用
+                               </p>
+                             </div>
                              <div className="space-y-3">
                                <div className="p-4 bg-slate-50 rounded-xl border border-slate-100 shadow-sm flex items-center gap-3">
                                  <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 shrink-0">
