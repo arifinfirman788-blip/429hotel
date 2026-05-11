@@ -35,6 +35,13 @@ import productImg1 from './assets/images/product-side/img1.png';
 import productImg2 from './assets/images/product-side/img2.png';
 import productImg3 from './assets/images/product-side/img3.png';
 
+import expItineraryCard from './assets/images/experience/itinerary-card.png';
+import expDynamicPrompt from './assets/images/experience/dynamic-prompt.png';
+import expQuickService from './assets/images/experience/quick-service.png';
+
+import hwSpeaker from './assets/images/hardware/speaker.png';
+import hwNfcSticker from './assets/images/hardware/nfc-sticker.png';
+
 import { 
   BarChart3, 
   Hotel, 
@@ -825,7 +832,7 @@ export default function App() {
                               <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <DeviceMockup type="iphone">
                                   <img 
-                                    src="https://i.imgs.ovh/2026/04/29/jpxC1m.png" 
+                                    src={expItineraryCard} 
                                     alt="行程卡展示" 
                                     className="w-full h-auto"
                                     referrerPolicy="no-referrer"
@@ -835,7 +842,7 @@ export default function App() {
                               <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <DeviceMockup type="iphone">
                                   <img 
-                                    src="https://i.imgs.ovh/2026/04/29/jpxZQc.png" 
+                                    src={expDynamicPrompt} 
                                     alt="动态提示词咨询" 
                                     className="w-full h-auto"
                                     referrerPolicy="no-referrer"
@@ -845,7 +852,7 @@ export default function App() {
                               <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <DeviceMockup type="iphone">
                                   <img 
-                                    src="https://i.imgs.ovh/2026/04/29/jpxamp.png" 
+                                    src={expQuickService} 
                                     alt="快捷服务按钮" 
                                     className="w-full h-auto"
                                     referrerPolicy="no-referrer"
@@ -892,7 +899,7 @@ export default function App() {
                                 <ImageCard 
                                   label="方案1：房间智能音箱" 
                                   className="w-full h-full absolute inset-0" 
-                                  src="https://s1.img-e.com/20260429/69f0e286989f7.png"
+                                  src={hwSpeaker}
                                 />
                               </div>
                               {/* 方案2: 电视 */}
@@ -908,7 +915,7 @@ export default function App() {
                                 <ImageCard 
                                   label="方案3：前台评价碰碰贴" 
                                   className="w-full h-full absolute inset-0" 
-                                  src="https://s1.img-e.com/20260429/69f0e2ce83241.png"
+                                  src={hwNfcSticker}
                                 />
                               </div>
                               {/* 方案4: 一体机 */}
