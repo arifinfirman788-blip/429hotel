@@ -143,7 +143,7 @@ const ImageCard = ({ ratio = "", label, src, className = "" }: { ratio?: string,
           src={src} 
           alt={label} 
           loading="lazy"
-          className="w-full h-auto object-contain"
+          className="w-full h-full object-contain absolute inset-0"
           referrerPolicy="no-referrer"
         />
       </>
@@ -173,8 +173,8 @@ const ObjectiveItem = ({ num, title, content }: { num: string, title: string, co
 const Carousel = ({ children, autoPlay = true, interval = 3000, images = [] }: { children?: React.ReactNode, autoPlay?: boolean, interval?: number, images?: string[] }) => {
    const items = images.length > 0 
      ? images.map((src, i) => (
-         <div key={i} className="w-full h-full flex justify-center items-center p-2 relative">
-           <img src={src} alt={`Slide ${i + 1}`} className="max-h-full object-contain cursor-zoom-in" onClick={() => window.open(src, '_blank')} />
+         <div key={i} className="w-full h-full flex justify-center items-center relative overflow-hidden">
+           <img src={src} alt={`Slide ${i + 1}`} className="w-full h-full object-contain cursor-zoom-in" onClick={() => window.open(src, '_blank')} />
            {children}
          </div>
        ))
@@ -543,19 +543,9 @@ export default function App() {
                           <span className="text-blue-500 text-xs mt-1 inline-block">（同步考虑硬件方案）</span>
                         </p>
                         {/* 外部展示图轮播区域 */}
-                        <div className="w-full h-40 bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm relative" onClick={(e) => e.stopPropagation()}>
-                          <Carousel>
-                            <div className="w-full h-full flex justify-center items-center p-2">
-                              <img src={audioKnowledge1} alt="AI 录音提取展示" className="max-h-full object-contain" />
-                            </div>
-                            <div className="w-full h-full flex justify-center items-center p-2">
-                              <img src={audioKnowledge2} alt="展业工具界面" className="max-h-full object-contain" />
-                            </div>
-                            <div className="w-full h-full flex justify-center items-center p-2">
-                              <img src={audioKnowledge3} alt="录音豆设备展示" className="max-h-full object-contain" />
-                            </div>
-                          </Carousel>
-                          <div className="absolute inset-0 z-10 cursor-pointer pointer-events-none group-hover:bg-blue-500/5 transition-colors" onClick={() => setActiveModal('audio_to_knowledge')}></div>
+                        <div className="w-full h-56 bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm relative" onClick={(e) => e.stopPropagation()}>
+                          <Carousel images={[audioKnowledge1, audioKnowledge2, audioKnowledge3]} />
+                          <div className="absolute inset-0 z-10 cursor-pointer hover:bg-blue-500/5 transition-colors" onClick={() => setActiveModal('audio_to_knowledge')}></div>
                         </div>
                       </div>
                       
@@ -574,16 +564,9 @@ export default function App() {
                           帮助内部团队快速形成客户档案
                         </p>
                         {/* 外部展示图轮播区域 */}
-                        <div className="w-full h-40 bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm relative" onClick={(e) => e.stopPropagation()}>
-                          <Carousel>
-                            <div className="w-full h-full flex justify-center items-center p-2">
-                              <img src={aiData1} alt="AI数据采集界面 1" className="max-h-full object-contain" />
-                            </div>
-                            <div className="w-full h-full flex justify-center items-center p-2">
-                              <img src={aiData2} alt="AI数据采集界面 2" className="max-h-full object-contain" />
-                            </div>
-                          </Carousel>
-                          <div className="absolute inset-0 z-10 cursor-pointer pointer-events-none group-hover:bg-blue-500/5 transition-colors" onClick={() => setActiveModal('ai_data_collection')}></div>
+                        <div className="w-full h-56 bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm relative" onClick={(e) => e.stopPropagation()}>
+                          <Carousel images={[aiData1, aiData2]} />
+                          <div className="absolute inset-0 z-10 cursor-pointer hover:bg-blue-500/5 transition-colors" onClick={() => setActiveModal('ai_data_collection')}></div>
                         </div>
                       </div>
                       
@@ -602,7 +585,7 @@ export default function App() {
                           帮助全国版本快速拓客
                         </p>
                         {/* 外部展示图轮播区域 */}
-                        <div className="w-full h-40 bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm relative group/img" onClick={(e) => { e.stopPropagation(); setActiveModal('city_partner'); }}>
+                        <div className="w-full h-56 bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm relative group/img" onClick={(e) => { e.stopPropagation(); setActiveModal('city_partner'); }}>
                           <Carousel images={[cityPartner1, cityPartner2, cityPartner3]}>
                             <div className="absolute inset-0 bg-black/5 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
                                <div className="bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1.5 text-blue-600 text-xs font-bold">
@@ -673,19 +656,19 @@ export default function App() {
                               </div>
                             </div>
                           </div>
-                          <div className="lg:w-2/3 w-full bg-white p-6 rounded-2xl border border-slate-100 flex items-center justify-center min-h-[400px]">
+                          <div className="lg:w-2/3 w-full bg-white p-6 rounded-2xl border border-slate-100 flex items-center justify-center h-[500px]">
                             <Carousel>
-                              <div className="w-full flex justify-center py-6">
+                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <ImageCard 
                                   label="门票数据说明" 
-                                  className="w-full max-w-md" 
+                                  className="w-full h-full absolute inset-0" 
                                   src={dataTicket}
                                 />
                               </div>
-                              <div className="w-full flex justify-center py-6">
+                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <ImageCard 
                                   label="用车数据说明" 
-                                  className="w-full max-w-md" 
+                                  className="w-full h-full absolute inset-0" 
                                   src={dataCar}
                                 />
                               </div>
@@ -722,10 +705,10 @@ export default function App() {
                               </div>
                             </div>
                           </div>
-                          <div className="lg:w-2/3 w-full bg-white p-6 rounded-2xl border border-slate-100 flex items-center justify-center min-h-[400px]">
+                          <div className="lg:w-2/3 w-full bg-white p-6 rounded-2xl border border-slate-100 flex items-center justify-center h-[500px]">
                             <Carousel>
                               {/* 供应链方案 */}
-                              <div className="w-full flex justify-center py-6">
+                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <DeviceMockup type="iphone">
                                   <img 
                                     src="https://i.imgs.ovh/2026/04/28/jpujde.jpeg" 
@@ -737,31 +720,31 @@ export default function App() {
                                 </DeviceMockup>
                               </div>
                               {/* 陪跑卡片 */}
-                              <div className="w-full flex justify-center py-6">
+                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <ImageCard 
                                   label="试点酒店陪跑场景自适应卡片" 
-                                  className="w-full max-w-md" 
+                                  className="w-full h-full absolute inset-0" 
                                   src="https://i.imgs.ovh/2026/04/28/jpurzt.png"
                                 />
                               </div>
                               {/* 触点 A */}
-                              <div className="w-full flex justify-center py-6">
+                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <ImageCard 
                                   label="触点部署 A" 
-                                  className="w-full max-w-md" 
+                                  className="w-full h-full absolute inset-0" 
                                   src="https://i.imgs.ovh/2026/04/28/jpuTMA.jpeg"
                                 />
                               </div>
                               {/* 触点 B */}
-                              <div className="w-full flex justify-center py-6">
+                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <ImageCard 
                                   label="触点部署 B" 
-                                  className="w-full max-w-md" 
+                                  className="w-full h-full absolute inset-0" 
                                   src="https://i.imgs.ovh/2026/04/28/jpubjH.jpeg"
                                 />
                               </div>
                               {/* 需求推送 */}
-                              <div className="w-full flex justify-center py-6">
+                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                  <DeviceMockup type="iphone">
                                    <img 
                                      src="https://i.imgs.ovh/2026/04/28/jpudcM.jpeg" 
@@ -772,21 +755,21 @@ export default function App() {
                                    />
                                  </DeviceMockup>
                               </div>
-                              <div className="w-full flex justify-center py-6">
+                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <ImageCard 
                                   label="产品侧说明展示图 1" 
-                                  className="w-full max-w-md" 
+                                  className="w-full h-full absolute inset-0" 
                                   src={productSide1}
                                 />
                               </div>
-                              <div className="w-full flex justify-center py-6">
+                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <ImageCard 
                                   label="产品侧说明展示图 2" 
-                                  className="w-full max-w-md" 
+                                  className="w-full h-full absolute inset-0" 
                                   src={productSide2}
                                 />
                               </div>
-                              <div className="w-full flex justify-center py-6">
+                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <DeviceMockup type="tablet">
                                   <img 
                                     src="https://i.imgs.ovh/2026/04/28/jpul8r.png" 
@@ -868,9 +851,9 @@ export default function App() {
                               </div>
                             </div>
                           </div>
-                          <div className="lg:w-2/3 w-full bg-white p-6 rounded-2xl border border-slate-100 flex items-center justify-center min-h-[400px]">
+                          <div className="lg:w-2/3 w-full bg-white p-6 rounded-2xl border border-slate-100 flex items-center justify-center h-[500px]">
                             <Carousel>
-                              <div className="w-full flex justify-center py-6">
+                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <DeviceMockup type="iphone">
                                   <img 
                                     src="https://i.imgs.ovh/2026/04/29/jpxC1m.png" 
@@ -880,7 +863,7 @@ export default function App() {
                                   />
                                 </DeviceMockup>
                               </div>
-                              <div className="w-full flex justify-center py-6">
+                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <DeviceMockup type="iphone">
                                   <img 
                                     src="https://i.imgs.ovh/2026/04/29/jpxZQc.png" 
@@ -890,7 +873,7 @@ export default function App() {
                                   />
                                 </DeviceMockup>
                               </div>
-                              <div className="w-full flex justify-center py-6">
+                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <DeviceMockup type="iphone">
                                   <img 
                                     src="https://i.imgs.ovh/2026/04/29/jpxamp.png" 
@@ -933,37 +916,37 @@ export default function App() {
                               </div>
                             </div>
                           </div>
-                          <div className="lg:w-2/3 w-full bg-white p-6 rounded-2xl border border-slate-100 flex items-center justify-center min-h-[400px]">
+                          <div className="lg:w-2/3 w-full bg-white p-6 rounded-2xl border border-slate-100 flex items-center justify-center h-[500px]">
                             <Carousel>
                               {/* 方案1: 音箱 */}
-                              <div className="w-full flex justify-center py-6">
+                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <ImageCard 
                                   label="方案1：房间智能音箱" 
-                                  className="w-full max-w-md" 
+                                  className="w-full h-full absolute inset-0" 
                                   src="https://s1.img-e.com/20260429/69f0e286989f7.png"
                                 />
                               </div>
                               {/* 方案2: 电视 */}
-                              <div className="w-full flex justify-center py-6">
+                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <ImageCard 
                                   label="方案2：电视接入" 
-                                  className="w-full max-w-md" 
+                                  className="w-full h-full absolute inset-0" 
                                   src={hardwareTv}
                                 />
                               </div>
                               {/* 方案3: 碰碰贴 */}
-                              <div className="w-full flex justify-center py-6">
+                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <ImageCard 
                                   label="方案3：前台评价碰碰贴" 
-                                  className="w-full max-w-md" 
+                                  className="w-full h-full absolute inset-0" 
                                   src="https://s1.img-e.com/20260429/69f0e2ce83241.png"
                                 />
                               </div>
                               {/* 方案4: 一体机 */}
-                              <div className="w-full flex justify-center py-6">
+                              <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <ImageCard 
                                   label="方案4：前台一体机" 
-                                  className="w-full max-w-md" 
+                                  className="w-full h-full absolute inset-0" 
                                   src={hardwareKiosk}
                                 />
                               </div>
