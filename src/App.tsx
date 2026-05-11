@@ -20,6 +20,12 @@ import dataTicket from './assets/images/data-ticket-new.png';
 import dataCar from './assets/images/data-car.png';
 import productSide1 from './assets/images/product-side-1.png';
 import productSide2 from './assets/images/product-side-2.png';
+import supplyChainImg from './assets/images/product-side/supply-chain.jpeg';
+import runWithCardImg from './assets/images/product-side/run-with-card.png';
+import contactAImg from './assets/images/product-side/contact-a.jpeg';
+import contactBImg from './assets/images/product-side/contact-b.jpeg';
+import demandPushImg from './assets/images/product-side/demand-push.jpeg';
+import tabletAdminImg from './assets/images/product-side/tablet-admin.png';
 
 import { 
   BarChart3, 
@@ -711,7 +717,7 @@ export default function App() {
                               <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <DeviceMockup type="iphone">
                                   <img 
-                                    src="https://i.imgs.ovh/2026/04/28/jpujde.jpeg" 
+                                    src={supplyChainImg} 
                                     alt="供应链方案" 
                                     loading="lazy"
                                     className="w-full h-auto"
@@ -724,7 +730,7 @@ export default function App() {
                                 <ImageCard 
                                   label="试点酒店陪跑场景自适应卡片" 
                                   className="w-full h-full absolute inset-0" 
-                                  src="https://i.imgs.ovh/2026/04/28/jpurzt.png"
+                                  src={runWithCardImg}
                                 />
                               </div>
                               {/* 触点 A */}
@@ -732,7 +738,7 @@ export default function App() {
                                 <ImageCard 
                                   label="触点部署 A" 
                                   className="w-full h-full absolute inset-0" 
-                                  src="https://i.imgs.ovh/2026/04/28/jpuTMA.jpeg"
+                                  src={contactAImg}
                                 />
                               </div>
                               {/* 触点 B */}
@@ -740,14 +746,14 @@ export default function App() {
                                 <ImageCard 
                                   label="触点部署 B" 
                                   className="w-full h-full absolute inset-0" 
-                                  src="https://i.imgs.ovh/2026/04/28/jpubjH.jpeg"
+                                  src={contactBImg}
                                 />
                               </div>
                               {/* 需求推送 */}
                               <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                  <DeviceMockup type="iphone">
                                    <img 
-                                     src="https://i.imgs.ovh/2026/04/28/jpudcM.jpeg" 
+                                     src={demandPushImg} 
                                      alt="AI识别需求推送" 
                                      loading="lazy"
                                      className="w-full h-auto"
@@ -772,7 +778,7 @@ export default function App() {
                               <div className="w-full h-full flex justify-center py-2 relative overflow-hidden">
                                 <DeviceMockup type="tablet">
                                   <img 
-                                    src="https://i.imgs.ovh/2026/04/28/jpul8r.png" 
+                                    src={tabletAdminImg} 
                                     alt="本地组网管理后台" 
                                     loading="lazy"
                                     className="w-full h-auto"
